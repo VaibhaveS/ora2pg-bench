@@ -1,0 +1,434 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 3 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in /workspaces/bench/Ora2PgBenchmark/bin/Release/net9.0/b48e6282-3aab-437d-bd01-a3766ca252cf
+// command took 3.04 sec and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in /workspaces/bench/Ora2PgBenchmark/bin/Release/net9.0/b48e6282-3aab-437d-bd01-a3766ca252cf
+// command took 8.27 sec and exited with 0
+// ***** Done, took 00:00:13 (13.03 sec)   *****
+// Found 3 benchmarks:
+//   Ora2PgBenchmarks.RunOra2Pg: DefaultJob [SchemaFile=large_schema.sql]
+//   Ora2PgBenchmarks.RunOra2Pg: DefaultJob [SchemaFile=medium_schema.sql]
+//   Ora2PgBenchmarks.RunOra2Pg: DefaultJob [SchemaFile=small_schema.sql]
+
+// **************************
+// Benchmark: Ora2PgBenchmarks.RunOra2Pg: DefaultJob [SchemaFile=large_schema.sql]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet b48e6282-3aab-437d-bd01-a3766ca252cf.dll --anonymousPipes 116 117 --benchmarkName "Ora2PgBenchmark.Ora2PgBenchmarks.RunOra2Pg(SchemaFile: \"large_schema.sql\")" --job Default --benchmarkId 0 in /workspaces/bench/Ora2PgBenchmark/bin/Release/net9.0/b48e6282-3aab-437d-bd01-a3766ca252cf/bin/Release/net9.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 9.0.5 (9.0.525.21509), X64 RyuJIT AVX-512F+CD+BW+DQ+VL
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX-512F+CD+BW+DQ+VL,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 287583.00 ns, 287.5830 us/op
+WorkloadJitting  1: 1 op, 348975402.00 ns, 348.9754 ms/op
+
+OverheadJitting  2: 1 op, 1389.00 ns, 1.3890 us/op
+WorkloadJitting  2: 1 op, 316293788.00 ns, 316.2938 ms/op
+
+WorkloadPilot    1: 2 op, 606454571.00 ns, 303.2273 ms/op
+
+WorkloadWarmup   1: 2 op, 600024734.00 ns, 300.0124 ms/op
+WorkloadWarmup   2: 2 op, 640415325.00 ns, 320.2077 ms/op
+WorkloadWarmup   3: 2 op, 641352841.00 ns, 320.6764 ms/op
+WorkloadWarmup   4: 2 op, 619227679.00 ns, 309.6138 ms/op
+WorkloadWarmup   5: 2 op, 604882512.00 ns, 302.4413 ms/op
+WorkloadWarmup   6: 2 op, 642150634.00 ns, 321.0753 ms/op
+WorkloadWarmup   7: 2 op, 621702427.00 ns, 310.8512 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 2 op, 616458902.00 ns, 308.2295 ms/op
+WorkloadActual   2: 2 op, 611763309.00 ns, 305.8817 ms/op
+WorkloadActual   3: 2 op, 573220367.00 ns, 286.6102 ms/op
+WorkloadActual   4: 2 op, 609733907.00 ns, 304.8670 ms/op
+WorkloadActual   5: 2 op, 613862951.00 ns, 306.9315 ms/op
+WorkloadActual   6: 2 op, 553140076.00 ns, 276.5700 ms/op
+WorkloadActual   7: 2 op, 573047665.00 ns, 286.5238 ms/op
+WorkloadActual   8: 2 op, 608530535.00 ns, 304.2653 ms/op
+WorkloadActual   9: 2 op, 651396602.00 ns, 325.6983 ms/op
+WorkloadActual  10: 2 op, 643634605.00 ns, 321.8173 ms/op
+WorkloadActual  11: 2 op, 617566583.00 ns, 308.7833 ms/op
+WorkloadActual  12: 2 op, 596309616.00 ns, 298.1548 ms/op
+WorkloadActual  13: 2 op, 649215233.00 ns, 324.6076 ms/op
+WorkloadActual  14: 2 op, 627233671.00 ns, 313.6168 ms/op
+WorkloadActual  15: 2 op, 604967911.00 ns, 302.4840 ms/op
+WorkloadActual  16: 2 op, 586498053.00 ns, 293.2490 ms/op
+WorkloadActual  17: 2 op, 592668406.00 ns, 296.3342 ms/op
+WorkloadActual  18: 2 op, 612005331.00 ns, 306.0027 ms/op
+WorkloadActual  19: 2 op, 640484469.00 ns, 320.2422 ms/op
+WorkloadActual  20: 2 op, 587670572.00 ns, 293.8353 ms/op
+WorkloadActual  21: 2 op, 633448203.00 ns, 316.7241 ms/op
+WorkloadActual  22: 2 op, 640085637.00 ns, 320.0428 ms/op
+WorkloadActual  23: 2 op, 600073428.00 ns, 300.0367 ms/op
+WorkloadActual  24: 2 op, 652629046.00 ns, 326.3145 ms/op
+WorkloadActual  25: 2 op, 592505289.00 ns, 296.2526 ms/op
+WorkloadActual  26: 2 op, 647146648.00 ns, 323.5733 ms/op
+WorkloadActual  27: 2 op, 634586968.00 ns, 317.2935 ms/op
+WorkloadActual  28: 2 op, 609078355.00 ns, 304.5392 ms/op
+WorkloadActual  29: 2 op, 619909733.00 ns, 309.9549 ms/op
+WorkloadActual  30: 2 op, 616227530.00 ns, 308.1138 ms/op
+WorkloadActual  31: 2 op, 608106996.00 ns, 304.0535 ms/op
+WorkloadActual  32: 2 op, 606512022.00 ns, 303.2560 ms/op
+WorkloadActual  33: 2 op, 645667393.00 ns, 322.8337 ms/op
+WorkloadActual  34: 2 op, 653885099.00 ns, 326.9425 ms/op
+WorkloadActual  35: 2 op, 592616552.00 ns, 296.3083 ms/op
+WorkloadActual  36: 2 op, 657375171.00 ns, 328.6876 ms/op
+WorkloadActual  37: 2 op, 612884582.00 ns, 306.4423 ms/op
+WorkloadActual  38: 2 op, 625535017.00 ns, 312.7675 ms/op
+WorkloadActual  39: 2 op, 595699471.00 ns, 297.8497 ms/op
+WorkloadActual  40: 2 op, 633645201.00 ns, 316.8226 ms/op
+WorkloadActual  41: 2 op, 609574330.00 ns, 304.7872 ms/op
+WorkloadActual  42: 2 op, 666047109.00 ns, 333.0236 ms/op
+WorkloadActual  43: 2 op, 664955722.00 ns, 332.4779 ms/op
+WorkloadActual  44: 2 op, 617014082.00 ns, 308.5070 ms/op
+WorkloadActual  45: 2 op, 592140438.00 ns, 296.0702 ms/op
+WorkloadActual  46: 2 op, 627226221.00 ns, 313.6131 ms/op
+WorkloadActual  47: 2 op, 583085298.00 ns, 291.5426 ms/op
+WorkloadActual  48: 2 op, 592022351.00 ns, 296.0112 ms/op
+WorkloadActual  49: 2 op, 622596688.00 ns, 311.2983 ms/op
+WorkloadActual  50: 2 op, 595999534.00 ns, 297.9998 ms/op
+WorkloadActual  51: 2 op, 620122238.00 ns, 310.0611 ms/op
+WorkloadActual  52: 2 op, 607750661.00 ns, 303.8753 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 2 op, 616458902.00 ns, 308.2295 ms/op
+WorkloadResult   2: 2 op, 611763309.00 ns, 305.8817 ms/op
+WorkloadResult   3: 2 op, 573220367.00 ns, 286.6102 ms/op
+WorkloadResult   4: 2 op, 609733907.00 ns, 304.8670 ms/op
+WorkloadResult   5: 2 op, 613862951.00 ns, 306.9315 ms/op
+WorkloadResult   6: 2 op, 553140076.00 ns, 276.5700 ms/op
+WorkloadResult   7: 2 op, 573047665.00 ns, 286.5238 ms/op
+WorkloadResult   8: 2 op, 608530535.00 ns, 304.2653 ms/op
+WorkloadResult   9: 2 op, 651396602.00 ns, 325.6983 ms/op
+WorkloadResult  10: 2 op, 643634605.00 ns, 321.8173 ms/op
+WorkloadResult  11: 2 op, 617566583.00 ns, 308.7833 ms/op
+WorkloadResult  12: 2 op, 596309616.00 ns, 298.1548 ms/op
+WorkloadResult  13: 2 op, 649215233.00 ns, 324.6076 ms/op
+WorkloadResult  14: 2 op, 627233671.00 ns, 313.6168 ms/op
+WorkloadResult  15: 2 op, 604967911.00 ns, 302.4840 ms/op
+WorkloadResult  16: 2 op, 586498053.00 ns, 293.2490 ms/op
+WorkloadResult  17: 2 op, 592668406.00 ns, 296.3342 ms/op
+WorkloadResult  18: 2 op, 612005331.00 ns, 306.0027 ms/op
+WorkloadResult  19: 2 op, 640484469.00 ns, 320.2422 ms/op
+WorkloadResult  20: 2 op, 587670572.00 ns, 293.8353 ms/op
+WorkloadResult  21: 2 op, 633448203.00 ns, 316.7241 ms/op
+WorkloadResult  22: 2 op, 640085637.00 ns, 320.0428 ms/op
+WorkloadResult  23: 2 op, 600073428.00 ns, 300.0367 ms/op
+WorkloadResult  24: 2 op, 652629046.00 ns, 326.3145 ms/op
+WorkloadResult  25: 2 op, 592505289.00 ns, 296.2526 ms/op
+WorkloadResult  26: 2 op, 647146648.00 ns, 323.5733 ms/op
+WorkloadResult  27: 2 op, 634586968.00 ns, 317.2935 ms/op
+WorkloadResult  28: 2 op, 609078355.00 ns, 304.5392 ms/op
+WorkloadResult  29: 2 op, 619909733.00 ns, 309.9549 ms/op
+WorkloadResult  30: 2 op, 616227530.00 ns, 308.1138 ms/op
+WorkloadResult  31: 2 op, 608106996.00 ns, 304.0535 ms/op
+WorkloadResult  32: 2 op, 606512022.00 ns, 303.2560 ms/op
+WorkloadResult  33: 2 op, 645667393.00 ns, 322.8337 ms/op
+WorkloadResult  34: 2 op, 653885099.00 ns, 326.9425 ms/op
+WorkloadResult  35: 2 op, 592616552.00 ns, 296.3083 ms/op
+WorkloadResult  36: 2 op, 657375171.00 ns, 328.6876 ms/op
+WorkloadResult  37: 2 op, 612884582.00 ns, 306.4423 ms/op
+WorkloadResult  38: 2 op, 625535017.00 ns, 312.7675 ms/op
+WorkloadResult  39: 2 op, 595699471.00 ns, 297.8497 ms/op
+WorkloadResult  40: 2 op, 633645201.00 ns, 316.8226 ms/op
+WorkloadResult  41: 2 op, 609574330.00 ns, 304.7872 ms/op
+WorkloadResult  42: 2 op, 666047109.00 ns, 333.0236 ms/op
+WorkloadResult  43: 2 op, 664955722.00 ns, 332.4779 ms/op
+WorkloadResult  44: 2 op, 617014082.00 ns, 308.5070 ms/op
+WorkloadResult  45: 2 op, 592140438.00 ns, 296.0702 ms/op
+WorkloadResult  46: 2 op, 627226221.00 ns, 313.6131 ms/op
+WorkloadResult  47: 2 op, 583085298.00 ns, 291.5426 ms/op
+WorkloadResult  48: 2 op, 592022351.00 ns, 296.0112 ms/op
+WorkloadResult  49: 2 op, 622596688.00 ns, 311.2983 ms/op
+WorkloadResult  50: 2 op, 595999534.00 ns, 297.9998 ms/op
+WorkloadResult  51: 2 op, 620122238.00 ns, 310.0611 ms/op
+WorkloadResult  52: 2 op, 607750661.00 ns, 303.8753 ms/op
+// GC:  0 0 0 106584 2
+// Threading:  0 0 2
+
+// AfterAll
+// Benchmark Process 19393 has exited with code 0.
+
+Mean = 308.130 ms, StdErr = 1.740 ms (0.56%), N = 52, StdDev = 12.548 ms
+Min = 276.570 ms, Q1 = 298.116 ms, Median = 306.687 ms, Q3 = 316.940 ms, Max = 333.024 ms
+IQR = 18.824 ms, LowerFence = 269.880 ms, UpperFence = 345.177 ms
+ConfidenceInterval = [302.055 ms; 314.206 ms] (CI 99.9%), Margin = 6.076 ms (1.97% of Mean)
+Skewness = 0.01, Kurtosis = 2.52, MValue = 2.42
+
+// ** Remained 2 (66.7%) benchmark(s) to run. Estimated finish 2025-06-12 10:22 (0h 1m from now) **
+// **************************
+// Benchmark: Ora2PgBenchmarks.RunOra2Pg: DefaultJob [SchemaFile=medium_schema.sql]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet b48e6282-3aab-437d-bd01-a3766ca252cf.dll --anonymousPipes 116 117 --benchmarkName "Ora2PgBenchmark.Ora2PgBenchmarks.RunOra2Pg(SchemaFile: \"medium_schema.sql\")" --job Default --benchmarkId 1 in /workspaces/bench/Ora2PgBenchmark/bin/Release/net9.0/b48e6282-3aab-437d-bd01-a3766ca252cf/bin/Release/net9.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 9.0.5 (9.0.525.21509), X64 RyuJIT AVX-512F+CD+BW+DQ+VL
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX-512F+CD+BW+DQ+VL,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 778664.00 ns, 778.6640 us/op
+WorkloadJitting  1: 1 op, 299354690.00 ns, 299.3547 ms/op
+
+WorkloadPilot    1: 2 op, 595695814.00 ns, 297.8479 ms/op
+
+WorkloadWarmup   1: 2 op, 586336540.00 ns, 293.1683 ms/op
+WorkloadWarmup   2: 2 op, 594378075.00 ns, 297.1890 ms/op
+WorkloadWarmup   3: 2 op, 634619571.00 ns, 317.3098 ms/op
+WorkloadWarmup   4: 2 op, 583210846.00 ns, 291.6054 ms/op
+WorkloadWarmup   5: 2 op, 579905003.00 ns, 289.9525 ms/op
+WorkloadWarmup   6: 2 op, 602821944.00 ns, 301.4110 ms/op
+WorkloadWarmup   7: 2 op, 579512076.00 ns, 289.7560 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 2 op, 552178287.00 ns, 276.0891 ms/op
+WorkloadActual   2: 2 op, 546827694.00 ns, 273.4138 ms/op
+WorkloadActual   3: 2 op, 584550120.00 ns, 292.2751 ms/op
+WorkloadActual   4: 2 op, 590544228.00 ns, 295.2721 ms/op
+WorkloadActual   5: 2 op, 583910056.00 ns, 291.9550 ms/op
+WorkloadActual   6: 2 op, 560510239.00 ns, 280.2551 ms/op
+WorkloadActual   7: 2 op, 574614283.00 ns, 287.3071 ms/op
+WorkloadActual   8: 2 op, 589338336.00 ns, 294.6692 ms/op
+WorkloadActual   9: 2 op, 615141920.00 ns, 307.5710 ms/op
+WorkloadActual  10: 2 op, 590878683.00 ns, 295.4393 ms/op
+WorkloadActual  11: 2 op, 563059836.00 ns, 281.5299 ms/op
+WorkloadActual  12: 2 op, 580730352.00 ns, 290.3652 ms/op
+WorkloadActual  13: 2 op, 571551516.00 ns, 285.7758 ms/op
+WorkloadActual  14: 2 op, 588907466.00 ns, 294.4537 ms/op
+WorkloadActual  15: 2 op, 596507887.00 ns, 298.2539 ms/op
+WorkloadActual  16: 2 op, 566426599.00 ns, 283.2133 ms/op
+WorkloadActual  17: 2 op, 563482083.00 ns, 281.7410 ms/op
+WorkloadActual  18: 2 op, 567051767.00 ns, 283.5259 ms/op
+WorkloadActual  19: 2 op, 570254677.00 ns, 285.1273 ms/op
+WorkloadActual  20: 2 op, 583458102.00 ns, 291.7291 ms/op
+WorkloadActual  21: 2 op, 581598097.00 ns, 290.7990 ms/op
+WorkloadActual  22: 2 op, 602370783.00 ns, 301.1854 ms/op
+WorkloadActual  23: 2 op, 552896962.00 ns, 276.4485 ms/op
+WorkloadActual  24: 2 op, 575034836.00 ns, 287.5174 ms/op
+WorkloadActual  25: 2 op, 612868969.00 ns, 306.4345 ms/op
+WorkloadActual  26: 2 op, 582818568.00 ns, 291.4093 ms/op
+WorkloadActual  27: 2 op, 589672628.00 ns, 294.8363 ms/op
+WorkloadActual  28: 2 op, 561656419.00 ns, 280.8282 ms/op
+WorkloadActual  29: 2 op, 599888389.00 ns, 299.9442 ms/op
+WorkloadActual  30: 2 op, 609381099.00 ns, 304.6905 ms/op
+WorkloadActual  31: 2 op, 589362296.00 ns, 294.6811 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 2 op, 552178287.00 ns, 276.0891 ms/op
+WorkloadResult   2: 2 op, 546827694.00 ns, 273.4138 ms/op
+WorkloadResult   3: 2 op, 584550120.00 ns, 292.2751 ms/op
+WorkloadResult   4: 2 op, 590544228.00 ns, 295.2721 ms/op
+WorkloadResult   5: 2 op, 583910056.00 ns, 291.9550 ms/op
+WorkloadResult   6: 2 op, 560510239.00 ns, 280.2551 ms/op
+WorkloadResult   7: 2 op, 574614283.00 ns, 287.3071 ms/op
+WorkloadResult   8: 2 op, 589338336.00 ns, 294.6692 ms/op
+WorkloadResult   9: 2 op, 615141920.00 ns, 307.5710 ms/op
+WorkloadResult  10: 2 op, 590878683.00 ns, 295.4393 ms/op
+WorkloadResult  11: 2 op, 563059836.00 ns, 281.5299 ms/op
+WorkloadResult  12: 2 op, 580730352.00 ns, 290.3652 ms/op
+WorkloadResult  13: 2 op, 571551516.00 ns, 285.7758 ms/op
+WorkloadResult  14: 2 op, 588907466.00 ns, 294.4537 ms/op
+WorkloadResult  15: 2 op, 596507887.00 ns, 298.2539 ms/op
+WorkloadResult  16: 2 op, 566426599.00 ns, 283.2133 ms/op
+WorkloadResult  17: 2 op, 563482083.00 ns, 281.7410 ms/op
+WorkloadResult  18: 2 op, 567051767.00 ns, 283.5259 ms/op
+WorkloadResult  19: 2 op, 570254677.00 ns, 285.1273 ms/op
+WorkloadResult  20: 2 op, 583458102.00 ns, 291.7291 ms/op
+WorkloadResult  21: 2 op, 581598097.00 ns, 290.7990 ms/op
+WorkloadResult  22: 2 op, 602370783.00 ns, 301.1854 ms/op
+WorkloadResult  23: 2 op, 552896962.00 ns, 276.4485 ms/op
+WorkloadResult  24: 2 op, 575034836.00 ns, 287.5174 ms/op
+WorkloadResult  25: 2 op, 612868969.00 ns, 306.4345 ms/op
+WorkloadResult  26: 2 op, 582818568.00 ns, 291.4093 ms/op
+WorkloadResult  27: 2 op, 589672628.00 ns, 294.8363 ms/op
+WorkloadResult  28: 2 op, 561656419.00 ns, 280.8282 ms/op
+WorkloadResult  29: 2 op, 599888389.00 ns, 299.9442 ms/op
+WorkloadResult  30: 2 op, 609381099.00 ns, 304.6905 ms/op
+WorkloadResult  31: 2 op, 589362296.00 ns, 294.6811 ms/op
+// GC:  0 0 0 104264 2
+// Threading:  0 0 2
+
+// AfterAll
+// Benchmark Process 19801 has exited with code 0.
+
+Mean = 290.282 ms, StdErr = 1.592 ms (0.55%), N = 31, StdDev = 8.865 ms
+Min = 273.414 ms, Q1 = 283.370 ms, Median = 291.409 ms, Q3 = 295.054 ms, Max = 307.571 ms
+IQR = 11.685 ms, LowerFence = 265.843 ms, UpperFence = 312.581 ms
+ConfidenceInterval = [284.477 ms; 296.087 ms] (CI 99.9%), Margin = 5.805 ms (2.00% of Mean)
+Skewness = 0.06, Kurtosis = 2.21, MValue = 2
+
+// ** Remained 1 (33.3%) benchmark(s) to run. Estimated finish 2025-06-12 10:22 (0h 0m from now) **
+// **************************
+// Benchmark: Ora2PgBenchmarks.RunOra2Pg: DefaultJob [SchemaFile=small_schema.sql]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet b48e6282-3aab-437d-bd01-a3766ca252cf.dll --anonymousPipes 116 117 --benchmarkName "Ora2PgBenchmark.Ora2PgBenchmarks.RunOra2Pg(SchemaFile: \"small_schema.sql\")" --job Default --benchmarkId 2 in /workspaces/bench/Ora2PgBenchmark/bin/Release/net9.0/b48e6282-3aab-437d-bd01-a3766ca252cf/bin/Release/net9.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 9.0.5 (9.0.525.21509), X64 RyuJIT AVX-512F+CD+BW+DQ+VL
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX-512F+CD+BW+DQ+VL,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 323049.00 ns, 323.0490 us/op
+WorkloadJitting  1: 1 op, 299019732.00 ns, 299.0197 ms/op
+
+WorkloadPilot    1: 2 op, 582870160.00 ns, 291.4351 ms/op
+
+WorkloadWarmup   1: 2 op, 573743872.00 ns, 286.8719 ms/op
+WorkloadWarmup   2: 2 op, 543347115.00 ns, 271.6736 ms/op
+WorkloadWarmup   3: 2 op, 565116016.00 ns, 282.5580 ms/op
+WorkloadWarmup   4: 2 op, 551598483.00 ns, 275.7992 ms/op
+WorkloadWarmup   5: 2 op, 612831480.00 ns, 306.4157 ms/op
+WorkloadWarmup   6: 2 op, 577032127.00 ns, 288.5161 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 2 op, 579862891.00 ns, 289.9314 ms/op
+WorkloadActual   2: 2 op, 572357668.00 ns, 286.1788 ms/op
+WorkloadActual   3: 2 op, 583876426.00 ns, 291.9382 ms/op
+WorkloadActual   4: 2 op, 580894963.00 ns, 290.4475 ms/op
+WorkloadActual   5: 2 op, 572639438.00 ns, 286.3197 ms/op
+WorkloadActual   6: 2 op, 565884414.00 ns, 282.9422 ms/op
+WorkloadActual   7: 2 op, 565795678.00 ns, 282.8978 ms/op
+WorkloadActual   8: 2 op, 566325551.00 ns, 283.1628 ms/op
+WorkloadActual   9: 2 op, 545285611.00 ns, 272.6428 ms/op
+WorkloadActual  10: 2 op, 581984583.00 ns, 290.9923 ms/op
+WorkloadActual  11: 2 op, 552218389.00 ns, 276.1092 ms/op
+WorkloadActual  12: 2 op, 634445303.00 ns, 317.2227 ms/op
+WorkloadActual  13: 2 op, 556290546.00 ns, 278.1453 ms/op
+WorkloadActual  14: 2 op, 566929281.00 ns, 283.4646 ms/op
+WorkloadActual  15: 2 op, 573567328.00 ns, 286.7837 ms/op
+WorkloadActual  16: 2 op, 578487517.00 ns, 289.2438 ms/op
+WorkloadActual  17: 2 op, 572782706.00 ns, 286.3914 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 2 op, 579862891.00 ns, 289.9314 ms/op
+WorkloadResult   2: 2 op, 572357668.00 ns, 286.1788 ms/op
+WorkloadResult   3: 2 op, 583876426.00 ns, 291.9382 ms/op
+WorkloadResult   4: 2 op, 580894963.00 ns, 290.4475 ms/op
+WorkloadResult   5: 2 op, 572639438.00 ns, 286.3197 ms/op
+WorkloadResult   6: 2 op, 565884414.00 ns, 282.9422 ms/op
+WorkloadResult   7: 2 op, 565795678.00 ns, 282.8978 ms/op
+WorkloadResult   8: 2 op, 566325551.00 ns, 283.1628 ms/op
+WorkloadResult   9: 2 op, 545285611.00 ns, 272.6428 ms/op
+WorkloadResult  10: 2 op, 581984583.00 ns, 290.9923 ms/op
+WorkloadResult  11: 2 op, 552218389.00 ns, 276.1092 ms/op
+WorkloadResult  12: 2 op, 556290546.00 ns, 278.1453 ms/op
+WorkloadResult  13: 2 op, 566929281.00 ns, 283.4646 ms/op
+WorkloadResult  14: 2 op, 573567328.00 ns, 286.7837 ms/op
+WorkloadResult  15: 2 op, 578487517.00 ns, 289.2438 ms/op
+WorkloadResult  16: 2 op, 572782706.00 ns, 286.3914 ms/op
+// GC:  0 0 0 102552 2
+// Threading:  0 0 2
+
+// AfterAll
+// Benchmark Process 20101 has exited with code 0.
+
+Mean = 284.849 ms, StdErr = 1.380 ms (0.48%), N = 16, StdDev = 5.520 ms
+Min = 272.643 ms, Q1 = 282.931 ms, Median = 286.249 ms, Q3 = 289.416 ms, Max = 291.938 ms
+IQR = 6.485 ms, LowerFence = 273.204 ms, UpperFence = 299.143 ms
+ConfidenceInterval = [279.229 ms; 290.470 ms] (CI 99.9%), Margin = 5.620 ms (1.97% of Mean)
+Skewness = -0.67, Kurtosis = 2.43, MValue = 2
+
+// ** Remained 0 (0.0%) benchmark(s) to run. Estimated finish 2025-06-12 10:22 (0h 0m from now) **
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts/results/Ora2PgBenchmark.Ora2PgBenchmarks-report.csv
+  BenchmarkDotNet.Artifacts/results/Ora2PgBenchmark.Ora2PgBenchmarks-report-github.md
+  BenchmarkDotNet.Artifacts/results/Ora2PgBenchmark.Ora2PgBenchmarks-report.html
+
+// * Detailed results *
+Ora2PgBenchmarks.RunOra2Pg: DefaultJob [SchemaFile=large_schema.sql]
+Runtime = .NET 9.0.5 (9.0.525.21509), X64 RyuJIT AVX-512F+CD+BW+DQ+VL; GC = Concurrent Workstation
+Mean = 308.130 ms, StdErr = 1.740 ms (0.56%), N = 52, StdDev = 12.548 ms
+Min = 276.570 ms, Q1 = 298.116 ms, Median = 306.687 ms, Q3 = 316.940 ms, Max = 333.024 ms
+IQR = 18.824 ms, LowerFence = 269.880 ms, UpperFence = 345.177 ms
+ConfidenceInterval = [302.055 ms; 314.206 ms] (CI 99.9%), Margin = 6.076 ms (1.97% of Mean)
+Skewness = 0.01, Kurtosis = 2.52, MValue = 2.42
+-------------------- Histogram --------------------
+[272.158 ms ; 282.155 ms) | @
+[282.155 ms ; 291.377 ms) | @@
+[291.377 ms ; 300.202 ms) | @@@@@@@@@@@@
+[300.202 ms ; 311.303 ms) | @@@@@@@@@@@@@@@@@@@
+[311.303 ms ; 319.953 ms) | @@@@@@
+[319.953 ms ; 328.777 ms) | @@@@@@@@@@
+[328.777 ms ; 337.436 ms) | @@
+---------------------------------------------------
+
+Ora2PgBenchmarks.RunOra2Pg: DefaultJob [SchemaFile=medium_schema.sql]
+Runtime = .NET 9.0.5 (9.0.525.21509), X64 RyuJIT AVX-512F+CD+BW+DQ+VL; GC = Concurrent Workstation
+Mean = 290.282 ms, StdErr = 1.592 ms (0.55%), N = 31, StdDev = 8.865 ms
+Min = 273.414 ms, Q1 = 283.370 ms, Median = 291.409 ms, Q3 = 295.054 ms, Max = 307.571 ms
+IQR = 11.685 ms, LowerFence = 265.843 ms, UpperFence = 312.581 ms
+ConfidenceInterval = [284.477 ms; 296.087 ms] (CI 99.9%), Margin = 5.805 ms (2.00% of Mean)
+Skewness = 0.06, Kurtosis = 2.21, MValue = 2
+-------------------- Histogram --------------------
+[271.227 ms ; 278.635 ms) | @@@
+[278.635 ms ; 287.590 ms) | @@@@@@@@@@
+[287.590 ms ; 296.606 ms) | @@@@@@@@@@@@
+[296.606 ms ; 308.082 ms) | @@@@@@
+---------------------------------------------------
+
+Ora2PgBenchmarks.RunOra2Pg: DefaultJob [SchemaFile=small_schema.sql]
+Runtime = .NET 9.0.5 (9.0.525.21509), X64 RyuJIT AVX-512F+CD+BW+DQ+VL; GC = Concurrent Workstation
+Mean = 284.849 ms, StdErr = 1.380 ms (0.48%), N = 16, StdDev = 5.520 ms
+Min = 272.643 ms, Q1 = 282.931 ms, Median = 286.249 ms, Q3 = 289.416 ms, Max = 291.938 ms
+IQR = 6.485 ms, LowerFence = 273.204 ms, UpperFence = 299.143 ms
+ConfidenceInterval = [279.229 ms; 290.470 ms] (CI 99.9%), Margin = 5.620 ms (1.97% of Mean)
+Skewness = -0.67, Kurtosis = 2.43, MValue = 2
+-------------------- Histogram --------------------
+[272.519 ms ; 278.269 ms) | @@@
+[278.269 ms ; 293.497 ms) | @@@@@@@@@@@@@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet v0.13.12, Debian GNU/Linux 12 (bookworm) (container)
+Intel Xeon Silver 4214R CPU 2.40GHz, 1 CPU, 48 logical and 24 physical cores
+.NET SDK 9.0.300
+  [Host]     : .NET 9.0.5 (9.0.525.21509), X64 RyuJIT AVX-512F+CD+BW+DQ+VL
+  DefaultJob : .NET 9.0.5 (9.0.525.21509), X64 RyuJIT AVX-512F+CD+BW+DQ+VL
+
+
+| Method    | SchemaFile        | Mean     | Error   | StdDev   | Allocated |
+|---------- |------------------ |---------:|--------:|---------:|----------:|
+| RunOra2Pg | large_schema.sql  | 308.1 ms | 6.08 ms | 12.55 ms |  52.04 KB |
+| RunOra2Pg | medium_schema.sql | 290.3 ms | 5.81 ms |  8.86 ms |  50.91 KB |
+| RunOra2Pg | small_schema.sql  | 284.8 ms | 5.62 ms |  5.52 ms |  50.07 KB |
+
+// * Hints *
+Outliers
+  Ora2PgBenchmarks.RunOra2Pg: Default -> 1 outlier  was  removed (317.22 ms)
+
+// * Legends *
+  SchemaFile : Value of the 'SchemaFile' parameter
+  Mean       : Arithmetic mean of all measurements
+  Error      : Half of 99.9% confidence interval
+  StdDev     : Standard deviation of all measurements
+  Allocated  : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+  1 ms       : 1 Millisecond (0.001 sec)
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:01:19 (79.45 sec), executed benchmarks: 3
+
+Global total time: 00:01:32 (92.96 sec), executed benchmarks: 3
+// * Artifacts cleanup *
+Artifacts cleanup is finished

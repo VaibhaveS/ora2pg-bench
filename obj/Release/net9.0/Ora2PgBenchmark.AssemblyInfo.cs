@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ora2PgBenchmark")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9091de38fba06fb22a69ae68e864026c969d4c46")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ora2PgBenchmark")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ora2PgBenchmark")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

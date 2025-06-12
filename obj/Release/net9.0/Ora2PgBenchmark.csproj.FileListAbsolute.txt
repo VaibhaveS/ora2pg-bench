@@ -186,3 +186,6 @@ C:/Users/vsekar.REDMOND/bench/Ora2PgBenchmark/obj/Release/net9.0/Ora2PgBe.1646AC
 /workspaces/bench/Ora2PgBenchmark/obj/Release/net9.0/Ora2PgBenchmark.pdb
 /workspaces/bench/Ora2PgBenchmark/obj/Release/net9.0/Ora2PgBenchmark.genruntimeconfig.cache
 /workspaces/bench/Ora2PgBenchmark/obj/Release/net9.0/ref/Ora2PgBenchmark.dll
+/workspaces/bench/Ora2PgBenchmark/bin/Release/net9.0/large_schema.sql
+/workspaces/bench/Ora2PgBenchmark/bin/Release/net9.0/medium_schema.sql
+/workspaces/bench/Ora2PgBenchmark/bin/Release/net9.0/small_schema.sql

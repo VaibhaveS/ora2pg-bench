@@ -11,8 +11,17 @@ namespace Ora2PgBenchmark
     [MemoryDiagnoser]
     public class Ora2PgBenchmarks
     {
-        [Params("small_schema.sql", "medium_schema.sql", "large_schema.sql")]
-        public string SchemaFile { get; set; } = "small_schema.sql";
+        private static readonly string BaseDir = Path.GetDirectoryName(typeof(Ora2PgBenchmarks).Assembly.Location);
+
+        [ParamsSource(nameof(GetSchemaFiles))]
+        public string SchemaFile { get; set; }
+
+        public static IEnumerable<string> GetSchemaFiles()
+        {
+            yield return "small_schema.sql";
+            yield return "medium_schema.sql";
+            yield return "large_schema.sql";
+        }
 
         private string _ora2pgPath = string.Empty;
 
@@ -46,7 +55,7 @@ namespace Ora2PgBenchmark
             var processInfo = new ProcessStartInfo
             {
                 FileName = _ora2pgPath,
-                Arguments = $"-i {SchemaFile} -o output_{Path.GetFileNameWithoutExtension(SchemaFile)}.sql",
+                Arguments = $"-i {Path.Combine(BaseDir, SchemaFile)} -o {Path.Combine(BaseDir, $"output_{Path.GetFileNameWithoutExtension(SchemaFile)}.sql")}",
                 RedirectStandardOutput = true,
                 RedirectStandardError = true,
                 UseShellExecute = false
